@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/GameManager.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/kitchen.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/grill.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/plage.png" type="Texture" id=4]
+[ext_resource path="res://scenes/Plates.gd" type="Script" id=5]
+
+[node name="TestMap" type="Node2D"]
+
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="Kitchen" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Grill" type="Sprite" parent="."]
+position = Vector2( 1588, 699 )
+texture = ExtResource( 3 )
+
+[node name="Plates" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="Plage" type="Sprite" parent="Plates"]
+position = Vector2( 1032, 583 )
+texture = ExtResource( 4 )
+
+[node name="Plage2" type="Sprite" parent="Plates"]
+position = Vector2( 1019, 667 )
+texture = ExtResource( 4 )
+
+[node name="Plage3" type="Sprite" parent="Plates"]
+position = Vector2( 1010, 764 )
+texture = ExtResource( 4 )
+
+[node name="Plage4" type="Sprite" parent="Plates"]
+position = Vector2( 1204.5, 578.5 )
+texture = ExtResource( 4 )
+
+[node name="Plage5" type="Sprite" parent="Plates"]
+position = Vector2( 1207, 662.5 )
+texture = ExtResource( 4 )
+
+[node name="Plage6" type="Sprite" parent="Plates"]
+position = Vector2( 1212, 759.5 )
+texture = ExtResource( 4 )
