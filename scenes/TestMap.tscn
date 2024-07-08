@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/kitchen.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/grill.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/plage.png" type="Texture" id=4]
+[ext_resource path="res://prefabs/Grill.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/Bunscont.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Plates.gd" type="Script" id=5]
+[ext_resource path="res://prefabs/Plate.tscn" type="PackedScene" id=6]
 
 [node name="TestMap" type="Node2D"]
 
@@ -18,33 +19,29 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Grill" type="Sprite" parent="."]
-position = Vector2( 1588, 699 )
-texture = ExtResource( 3 )
+[node name="Grill" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1592, 693 )
 
 [node name="Plates" type="Node2D" parent="."]
 script = ExtResource( 5 )
 
-[node name="Plage" type="Sprite" parent="Plates"]
-position = Vector2( 1032, 583 )
-texture = ExtResource( 4 )
+[node name="Plage" parent="Plates" instance=ExtResource( 6 )]
+position = Vector2( 1035, 580 )
 
-[node name="Plage2" type="Sprite" parent="Plates"]
-position = Vector2( 1019, 667 )
-texture = ExtResource( 4 )
+[node name="Plage2" parent="Plates" instance=ExtResource( 6 )]
+position = Vector2( 1024, 662 )
 
-[node name="Plage3" type="Sprite" parent="Plates"]
-position = Vector2( 1010, 764 )
-texture = ExtResource( 4 )
+[node name="Plage3" parent="Plates" instance=ExtResource( 6 )]
+position = Vector2( 1014, 748 )
 
-[node name="Plage4" type="Sprite" parent="Plates"]
-position = Vector2( 1204.5, 578.5 )
-texture = ExtResource( 4 )
+[node name="Plage4" parent="Plates" instance=ExtResource( 6 )]
+position = Vector2( 1205, 585 )
 
-[node name="Plage5" type="Sprite" parent="Plates"]
-position = Vector2( 1207, 662.5 )
-texture = ExtResource( 4 )
+[node name="Plage5" parent="Plates" instance=ExtResource( 6 )]
+position = Vector2( 1215, 661 )
 
-[node name="Plage6" type="Sprite" parent="Plates"]
-position = Vector2( 1212, 759.5 )
-texture = ExtResource( 4 )
+[node name="Plage6" parent="Plates" instance=ExtResource( 6 )]
+position = Vector2( 1226, 744 )
+
+[node name="Bunscont" parent="." instance=ExtResource( 4 )]
+targetCookingMachine = NodePath("../Grill")

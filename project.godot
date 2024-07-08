@@ -8,10 +8,25 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Position2D",
+"class": "GrillPos",
+"language": "GDScript",
+"path": "res://prefabs/GrillPos.gd"
+} ]
+_global_script_class_icons={
+"GrillPos": ""
+}
+
 [application]
 
 config/name="JulietaKitchen"
+run/main_scene="res://scenes/TestMap.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GameManager="*res://scenes/GameManager.gd"
 
 [display]
 
